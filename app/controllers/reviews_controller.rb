@@ -7,7 +7,6 @@ class ReviewsController < ApplicationController
       redirect_to restaurant_path(@restaurant)
     else
       # Re-render the restaurant's show page with the form and errors
-      @reviews = @restaurant.reviews
       render 'restaurants/show', status: :unprocessable_entity
     end
   end
